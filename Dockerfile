@@ -18,10 +18,10 @@ RUN ln -s /usr/local/instantclient/sqlplus /usr/bin/sqlplus
 RUN apt-get install libaio-dev -y
 RUN apt-get clean -y
 
-RUN pip install cx_Oracle
-
 ENV ORACLE_HOME=/usr/local/instantclient
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/instantclient
+
+RUN pip install cx_Oracle
 
 #Add REDASH ENV to add Oracle Query Runner 
 ENV REDASH_ADDITIONAL_QUERY_RUNNERS=redash.query_runner.oracle
