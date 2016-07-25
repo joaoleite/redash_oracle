@@ -26,3 +26,4 @@ ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/instantclient
 #Add REDASH ENV to add Oracle Query Runner 
 ENV REDASH_ADDITIONAL_QUERY_RUNNERS=redash.query_runner.oracle
 
+COPY supervisord.conf /opt/redash/supervisord/supervisord.conf
