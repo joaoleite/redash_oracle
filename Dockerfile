@@ -25,5 +25,6 @@ ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/instantclient
 
 RUN pip install cx_Oracle
 
+USER redash
 #Add REDASH ENV to add Oracle Query Runner 
 ENV REDASH_ADDITIONAL_QUERY_RUNNERS=redash.query_runner.oracle
