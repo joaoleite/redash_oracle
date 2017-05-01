@@ -23,7 +23,7 @@ RUN apt-get clean -y
 ENV ORACLE_HOME=/usr/local/instantclient
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/instantclient
 
-RUN pip install cx_Oracle
+RUN pip install cx_Oracle==5.2.1
 
 USER redash
 #Add REDASH ENV to add Oracle Query Runner 
